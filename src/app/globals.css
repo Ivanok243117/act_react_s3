@@ -1,26 +1,108 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Estilos globales para toda la aplicación */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+nav {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #f8f9fa;
+}
+
+nav a {
+  margin-right: 1rem;
+  color: #0070f3;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1rem;
+  min-height: calc(100vh - 80px);
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 1rem;
+  color: #000; /* Asegurar que los títulos sean visibles */
+}
+
+p, li {
+  margin-bottom: 0.5rem;
+  color: #333; /* Asegurar que el texto sea visible */
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para las tarjetas de productos */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  color: #333; /* Asegurar texto visible */
+}
+
+.product-card h3 {
+  color: #0070f3;
+}
+
+/* Estilos para enlaces */
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para las páginas de productos y blog */
+.section-container {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  color: #333; /* Asegurar texto visible */
+}
+
+.category-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.category-nav a {
+  padding: 0.5rem 1rem;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.category-nav a:hover {
+  background-color: #0056b3;
+  text-decoration: none;
 }
